@@ -54,14 +54,7 @@ ExplorerGetHoveredItem() {
         name := accObj.accName[idChild]
     if !IsSet(name)
         return
-    loop files, RTrim(shellWindow.Document.Folder.Self.Path, '\') '\*', 'FD' {
-        if name = A_LoopFileName {
-            foundPath := A_LoopFilePath
-            break
-        }
-    }
-
-    return foundPath ?? ''
+    return RTrim(shellWindow.Document.Folder.Self.Path, '\') '\' name
 }
 
 ; by PLANKOE https://www.reddit.com/r/AutoHotkey/comments/1igtojs/comment/masgznv/
