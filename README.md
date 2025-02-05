@@ -1,5 +1,5 @@
 ## Folderpeek - an AutoHotkey v2 script
-Preview the contents of any folder in File Explorer
+Preview the contents of any folder in File Explorer, when you move the mouse over it.
 
 ![Demo](https://raw.githubusercontent.com/DavidBevi/folderpeek/refs/heads/main/folderpeek_demo.gif)
 
