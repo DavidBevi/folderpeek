@@ -9,13 +9,13 @@
 ;▼ (DOUBLE-CLICK) RELOAD THIS SCRIPT
 ~F2::(A_ThisHotkey=A_PriorHotkey and A_TimeSincePriorHotkey<200)? Reload(): {}
 
-;▼ TRAY ICON ---------------------------------------------------------------------
+; TRAY ICON - made with https://github.com/DavidBevi/PicEmbedder -----------------
 b:=Buffer(1), f:=FileOpen(A_Temp "\t","w"), s:="ƉŐŎŇčĊĚĊĀĀĀčŉňńŒĀĀĀĒĀĀĀĒĈĆĀĀĀŖǎƎŗ"
 s.="ĀĀĀāųŒŇłĀƮǎĜǩĀĀĀĄŧŁōŁĀĀƱƏċǼšąĀĀĀĉŰňřųĀĀĐǪĀĀĐǪāƂǓĊƘĀĀĀƍŉńŁŔĸŏţĘŴƀǱĿĐŀǙĸāģĐŀƙĸā"
 s.="ǘƠƇƛǸƠŜŌĠǯǷĉǊǂčŀĖđĴǨǰǅĿČłżƌČǚƊǌŐđŔĀƳƈĉŌŒĀŠƎƠǘĠĘǀŪǐǕǻſǁŞĂšŢāǉĮƂřƂĎưĚĄĊŘśŽĖİĦĖƐ"
 Loop Parse, s "ǬĢƘĥǨƀƶƁōĊƀƅėŖƃƈƉĵŴǹǁǣĵĘĀǧŪŐžăǳǈĄǄƔĎńĂĆĆĀŊƆĹĹŖǌŌǘĀĀĀĀŉŅŎńƮłŠƂ"
     NumPut("UChar", Ord(A_LoopField)-256, b), f.RawWrite(b)
-f.Close(), TraySetIcon(A_Temp "\t") ;▲ TRAY ICON ---------------------------------
+f.Close(), TraySetIcon(A_Temp "\t") ; TRAY ICON ----------------------------------
 
 
 ;▼ by DavidBevi
